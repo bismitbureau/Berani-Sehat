@@ -29,7 +29,35 @@
                 </div>
 
                 @includeWhen(Auth::user(), 'frontend._form')
+                @if(Auth::user() == null)
+                <h5>
+                    You have to Log in to post a Comment
+                </h5>
 
+                <div id="my-signin2" data-width="150" data-height="100" data-longtitle="true"></div>
+
+                <script>
+                    function onSuccess(googleUser) {
+                        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                    }
+                    function onFailure(error) {
+                        console.log(error);
+                    }
+                    function renderButton() {
+                        gapi.signin2.render('my-signin2', {
+                            'scope': 'profile email',
+                            'width': 240,
+                            'height': 50,
+                            'longtitle': true,
+                            'theme': 'dark',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                        });
+                    }
+                </script>
+
+                <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                @endif
                 @include('frontend._comments')
 
             </div>
