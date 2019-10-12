@@ -27,3 +27,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('/comments', 'CommentController', ['only' => ['index', 'destroy']]);
     Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
 });
+
+Route::get('test/homepage', function(){
+    return view('pages.homepage');
+});
