@@ -34,3 +34,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 Route::get('test/homepage', function(){
     return view('pages.homepage');
 });
+
+
+Route::get('test/categories', function(){
+    return view('pages.categories');
+});
