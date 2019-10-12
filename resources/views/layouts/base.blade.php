@@ -15,9 +15,9 @@
         @yield('extra-css')
     </head>
     <body>
-        @include('layout/_nav')
+        @include('layouts/_nav')
         @yield('content')
-        @include('layout/_footer')
+        @include('layouts/_footer')
         <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('lib/popper.min.js') }}"></script>
         <script src="{{ asset('lib/bootstrap.min.js') }}"></script>
