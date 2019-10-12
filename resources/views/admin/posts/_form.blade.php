@@ -10,12 +10,12 @@
     </div>
 </div>
 
-<div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
+<div class="form-group{{ $errors->has('ddasdasbody') ? ' has-error' : '' }}">
     {!! Form::label('body', 'Body', ['class' => 'col-md-2 control-label']) !!}
 
     <div class="col-md-8">
-        {!! Form::textarea('body', null, ['class' => 'form-control', 'required']) !!}
-
+        {!! Form::textarea('body', null, ['class' => 'form-control', 'required', 'id'=>'editor1']) !!}
+        
         <span class="help-block">
             <strong>{{ $errors->first('body') }}</strong>
         </span>
