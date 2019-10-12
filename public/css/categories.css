@@ -1,0 +1,115 @@
+#imgMain {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width: auto;
+    height: 20em;
+    object-fit: cover;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #EF3C40;
+}
+
+#imgSocMed {
+    width: auto;
+    height: 3em;
+}
+
+.container {
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 50vh;
+}
+
+#mainCategory {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+@media only screen and (min-width:767px) {
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #EF3C40;
+    }
+    .container:hover .overlay {
+        opacity: 0.7;
+    }
+    .container:hover title .deleteTitleOnHover {
+        display: none;
+    }
+}
+
+.deleteTitleOnHover {
+    color: white;
+    background-color: #EF3C40;
+    text-align: center;
+    padding: 10px;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-img-news {
+    object-fit: cover;
+    height: 35vh;
+}
+
+.card-body-news {
+    padding-top: 0.1rem;
+    min-height: 40rem;
+}
+
+@media only screen and (max-width:767px) {}
+
+
+/*AI*/
+
+.firstSection {
+    min-height: 50%;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    /* line-height: 24px; */
+    text-align: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:667px) {
+    .col-md-6 {
+        padding-left: 15px;
+    }
+}
+
+
+}
