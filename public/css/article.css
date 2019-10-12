@@ -1,0 +1,65 @@
+nav {
+    background-color: #EF4640;
+    color: white;
+    
+    font-weight: bold;
+    height: 15vh;
+    margin-bottom: 0%;
+    }
+    
+    nav span h1 {
+    font-size: 7vh;
+    }
+    
+    nav button {
+    align-self: flex-start;
+    justify-self: flex-start;
+    }    
+    
+    footer {
+    color: rgb(235, 228, 228);
+    background-color: rgb(31, 29, 29);
+    }
+    
+    .futer {
+    display: flex;
+    }
+    
+    .futer i{
+    margin: 1%;
+    }
+    
+    footer h2{
+    margin: 2%;
+    }
+
+    .headerkategori {
+        padding-top: 50px;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        background-size: cover;
+        background-image: url("/img/kategori.jpg");
+    }
+
+    .imgarticle {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+    
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .marginbottom{
+        margin-bottom: 15px;
+    }
+
+    .boxshadow{
+        box-shadow: 10px 10px 5px grey;
+    }
+    
