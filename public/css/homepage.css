@@ -9,11 +9,52 @@
 }
 .carousel-item{
     height: 100%;
+    height: 70vh !important;
 }
 
 .carousel-inner {
     width: 100%;
-    height: 85vh;
+}
+
+.head-article {
+    padding:0;
+    height:50vh;
+}
+
+.head-article img {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.head-article .unhidden {
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.head-article:hover img{
+    filter:blur(2px) brightness(38%);
+}
+
+.head-article:hover .hidden {
+    opacity: 1;
+}
+
+.head-article .unhidden {
+    top: 50%;
+    visibility:visible;
+}
+
+.head-article .unhidden div{
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+}
+
+.article-title {
+    text-transform: uppercase;
 }
 
 /* <!----------------categories------------------!> */
@@ -32,7 +73,25 @@
     margin-right: 8%;
 }
 
-.hidden h1{
+.hidden p {
+    color: white;
+}
+
+.unhidden {
+    top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.unhidden div{
+    width: 40%;
+    text-align: end;
+    margin-right: 8%;
+}
+
+.unhidden h1{
     color: #EF4640;
 }
 
@@ -50,13 +109,19 @@
 }
 
 .categories .hidden {
-    color: white;
     text-align: center;
     width: 100%;
     z-index: 1;
     position: absolute;
     opacity: 0;
     transition: 1s;
+}
+
+.categories .unhidden {
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
 }
 
 .categories:hover img{
@@ -75,6 +140,26 @@
     top: 30%;
     position: absolute;
     visibility:visible;
+}
+
+.categories .unhidden {
+    top: 50%;
+    position: absolute;
+    visibility:visible;
+}
+
+.categories:hover .unhidden {
+    top: 20%;
+    transition: 1;
+}
+
+.category-txt h1 {
+    font-size: 3.5vh;
+    text-transform: uppercase;
+}
+
+.category-txt p {
+    font-size: 2.5vh;
 }
 
 /* <!----------------about------------------!> */

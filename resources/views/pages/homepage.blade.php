@@ -20,14 +20,29 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active head-article">
                 <img src="https://picsum.photos/id/200/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+                <div class="row unhidden title-head">
+                    <div class="article-title">
+                        <h1>Artikel 1</h1>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/id/201/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+            <div class="carousel-item head-article">
+                <img src="https://picsum.photos/id/209/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+                <div class="row unhidden title-head">
+                    <div class="article-title">
+                        <h1>Artikel 2</h1>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/id/202/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+            <div class="carousel-item head-article">
+                <img src="https://picsum.photos/id/210/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+                <div class="row unhidden title-head">
+                    <div class="article-title">
+                        <h1>Artikel 3</h1>
+                    </div>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -41,9 +56,13 @@
     </div>
     <div class="container-fluid categories">
         <img src="https://picsum.photos/id/203/1000/500.jpg" alt="jar" class="categories-img">
-        <div class="row hidden">
+        <div class="row unhidden">
             <div class="col-sm-6 col-10 category-txt">
                 <h1>Kategori 1</h1>
+            </div>
+        </div>
+        <div class="row hidden">
+            <div class="col-sm-6 col-10 category-txt">
                 <p>uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
@@ -53,9 +72,13 @@
     </div>
     <div class="container-fluid categories">
         <img src="https://picsum.photos/id/204/1000/500.jpg" alt="jar" class="categories-img">
-        <div class="orw hidden">
+        <div class="row unhidden">
             <div class="col-sm-6 col-10 category-txt">
                 <h1>Kategori 2</h1>
+            </div>
+        </div>
+        <div class="row hidden">
+            <div class="col-sm-6 col-10 category-txt">
                 <p>uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif b
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif bee</p>
@@ -64,9 +87,13 @@
     </div>
     <div class="container-fluid categories">
         <img src="https://picsum.photos/id/206/1000/500.jpg" alt="jar" class="categories-img">
-        <div class="row hidden">
+        <div class="row unhidden">
             <div class="col-sm-6 col-10 category-txt">
                 <h1>Kategori 3</h1>
+            </div>
+        </div>
+        <div class="row hidden">
+            <div class="col-sm-6 col-10 category-txt">
                 <p>uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
                         uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
