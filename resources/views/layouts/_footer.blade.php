@@ -1,22 +1,28 @@
 <footer class="container-fluid">
     <div class="row">
-        <div class="col-lg">
-            <h2>Contact Us</h2>
+        <div class="col-8">
+            <h2 class="footer-title">Contact Us</h2>
             <div class="container futer">
                 <i class="fas fa-home"></i>
-                <p>MEDIA AESCULAPIUS, BEM IKM FKUI, GEDUNG C LANTAI 4, RUMPUN ILMU KESEHATAN, UI DEPOK.</p>
+                <p class="footer-text">MEDIA AESCULAPIUS, BEM IKM FKUI, GEDUNG C LANTAI 4, RUMPUN ILMU KESEHATAN, UI DEPOK.</p>
             </div>
             <div class="container futer">
                 <i class="fas fa-envelope"></i>
-                <p>MEDAESCULAPIUS@GMAIL.COM</p>
+                <p class="footer-text">MEDAESCULAPIUS@GMAIL.COM</p>
             </div>
         </div>
-        <div class="col-lg-4 icon-mom">
-            <h2 style="margin-bottom: 0;">Stay Connected</h2>
+        <div class="col-4 icon-mom">
+            <h2  class="footer-title"style="margin-bottom: 0;">Stay Connected</h2>
             <div class="container icons">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-line"></i>
-                <i class="fab fa-instagram"></i>
+                <a href="https://www.facebook.com/media.aesculapius">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-line"></i>
+                </a>
+                <a href="https://www.instagram.com/mediaaesculapius">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </div>

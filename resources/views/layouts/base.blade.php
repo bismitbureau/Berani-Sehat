@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <meta name="description" content="Berani Sehat Website Media Aesculapius BEM IKM FKUI, Gedung C Lantai 4, Rumpun Ilmu Kesehatan, Universitas Indonesia Depok">
 
+        <link rel="shortcut icon" href="{{ asset('img/Berani_sehat_icon.png') }}">
+
         <title>Berani Sehat | @yield('title')</title>
 
         <link rel="stylesheet" href="{{ asset('lib/bootstrap.min.css') }}">
