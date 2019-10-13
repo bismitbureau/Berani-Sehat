@@ -8,7 +8,7 @@
         <title>Berani Sehat | @yield('title')</title>
 
         <link rel="stylesheet" href="{{ asset('lib/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 
         @yield('extra-fonts')
         @yield('prerender-js')
@@ -21,7 +21,7 @@
         <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('lib/popper.min.js') }}"></script>
         <script src="{{ asset('lib/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/base.js') }}"></script>
         @yield('extra-js')
     </body>
 </html>

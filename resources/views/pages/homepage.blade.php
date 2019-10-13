@@ -13,18 +13,6 @@
 @endsection
 
 @section('content')
-    <nav class="navbar justify-content-center">
-        <div class="search-box">
-            <div class="search-box">
-                <input type="text" name="" class="search-txt" placeholder="Type to search"/>
-                <a class="search-btn" href="#"><i class="fas fa-search"></i></a>
-            </div>
-        </div>
-        <span class="navbar-brand mb-0 h1">
-            <h1>Berani Sehat</h1>
-        </span>
-    </nav>
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -116,30 +104,6 @@
             </div>
         </div>
     </div>
-
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-lg">
-                <h2>Contact Us</h2>
-                <div class="container futer">
-                    <i class="fas fa-home"></i>
-                    <p>MEDIA AESCULAPIUS, BEM IKM FKUI, GEDUNG C LANTAI 4, RUMPUN ILMU KESEHATAN, UI DEPOK.</p>
-                </div>
-                <div class="container futer">
-                    <i class="fas fa-envelope"></i>
-                    <p>MEDAESCULAPIUS@GMAIL.COM</p>
-                </div>
-            </div>
-            <div class="col-lg-4 icon-mom">
-                <h2 style="margin-bottom: 0;">Stay Connected</h2>
-                <div class="container icons">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-line"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
 @endsection
 
 @section('extra-js')

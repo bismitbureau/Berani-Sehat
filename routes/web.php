@@ -18,9 +18,6 @@ Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('test/article', function(){
-    return view('pages.article');
-});
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::resource('/posts', 'PostController');
@@ -31,11 +28,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
 });
 
-Route::get('test/homepage', function(){
-    return view('pages.homepage');
-});
-
-
-Route::get('test/categories', function(){
-    return view('pages.categories');
-});
+Route::get('/', 'PageController@homepage')->name('homepage');
+Route::get('/postingan/{post_id}', 'PageController@post')->name('post');
+Route::get('/kategori/{kategori_id}', 'PageController@category')->name('category');
