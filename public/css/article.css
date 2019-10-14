@@ -1,65 +1,106 @@
-nav {
+.headerkategori {
+    padding-top: 50px;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    color: #EF4640;
+    font-size: 5vh;
+    text-transform: uppercase;
+    padding-top: 25vh;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 5vh;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.imgarticle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.sosmed-artikel {
+    font-size: 20px;
+}
+
+.sosmed-artikel a {
+    text-decoration: none;
+    color: black;
+}
+
+.marginbottom {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.marginbottom .form-group {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-inline {
+    width: 100%;
+}
+
+#commentarticle {
+    width: 100% !important;
+    border-radius: 0;
+    border-color: red;
+    border-width: 1px;
+}
+
+.marginbottom .btn {
+    border-radius: 0;
+}
+
+.boxshadow {
+    box-shadow: 10px 10px 5px grey;
+    top: 35vh;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 35vh;
+}
+
+.outer {
+    z-index: -1;
+    overflow: hidden;
+}
+
+.section-title {
+    margin-top: 40px;
+}
+
+.section-title h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.article-picture img {
+    width: 180px;
+}
+
+.article-picture {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.section-title h4 {
+    margin-bottom: 0;
+}
+
+.article-title {
+    margin: auto;
     background-color: #EF4640;
     color: white;
-    
-    font-weight: bold;
-    height: 15vh;
-    margin-bottom: 0%;
-    }
-    
-    nav span h1 {
-    font-size: 7vh;
-    }
-    
-    nav button {
-    align-self: flex-start;
-    justify-self: flex-start;
-    }    
-    
-    footer {
-    color: rgb(235, 228, 228);
-    background-color: rgb(31, 29, 29);
-    }
-    
-    .futer {
-    display: flex;
-    }
-    
-    .futer i{
-    margin: 1%;
-    }
-    
-    footer h2{
-    margin: 2%;
-    }
-
-    .headerkategori {
-        padding-top: 50px;
-        height: 50vh;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-        background-size: cover;
-        background-image: url("/img/kategori.jpg");
-    }
-
-    .imgarticle {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 50px;
-    }
-    
-    .icon{
-        width: 30px;
-        height: 30px;
-    }
-
-    .marginbottom{
-        margin-bottom: 15px;
-    }
-
-    .boxshadow{
-        box-shadow: 10px 10px 5px grey;
-    }
-    
+    padding: 15px;
+}
