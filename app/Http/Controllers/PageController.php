@@ -12,9 +12,20 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
-    public function homepage()
+    public function homepage(Request $request)
     {
+        $posts = Post::when($request->search, function($query) use($request) {
+                        $search = $request->search;
+
+                        return $query->where('title', 'like', "%$search%")
+                            ->orWhere('body', 'like', "%$search%");
+                    })->with('tags', 'category', 'user')
+                    ->withCount('comments')
+                    ->published()
+                    ->simplePaginate(3);
+
         $categories = Category::all();
+
         return view('pages.homepage', get_defined_vars());
     }
 
