@@ -32,8 +32,10 @@ class PageController extends Controller
 
     public function post($post_id)
     {
-        $post = Post::get('id', $post_id);
-        $comments = Comment::where('post_id', $post_id)->get();
+        $post = Post::find($post_id);
+        $comments = Comment::where('post_id', $post_id)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
         return view('pages.article', get_defined_vars());
     }
 
@@ -43,8 +45,8 @@ class PageController extends Controller
         $posts = Post::where('category_id', $category_id)
                     ->with('tags', 'category', 'user')
                     ->withCount('comments')
-                    ->published()
                     ->orderBy('created_at', 'desc')
+                    ->published()
                     ->get();
 
         return view('pages.categories', get_defined_vars());

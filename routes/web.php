@@ -13,7 +13,7 @@
 
 Route::get('/', 'BlogController@index');
 Route::get('/posts/{post}', 'BlogController@post');
-Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
+Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth')->name('comment');
 
 Auth::routes();
 
