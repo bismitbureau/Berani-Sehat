@@ -22,17 +22,19 @@
         <div class="row">
             @foreach($posts as $post)
                 <div class="col-sm-12 col-md-4 container-fluid articles">
-                    <img src="https://picsum.photos/id/204/1000/500.jpg" alt="jar" class="articles-img">
-                    <div class="unhidden">
-                        <div class="article-txt">
-                            <h1>{{ $post->title }}</h1>
+                    <a href="{{ route('post', ['post_id' => $post->id]) }}">
+                        <img src="https://picsum.photos/id/204/1000/500.jpg" alt="jar" class="articles-img">
+                        <div class="unhidden">
+                            <div class="article-txt">
+                                <h1>{{ $post->title }}</h1>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hidden">
-                        <div class="article-txt">
-                            <p>{{ $post->body }}</p>
+                        <div class="hidden">
+                            <div class="article-txt">
+                                <p>{{ str_limit($post->body, 50) }}</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             @endforeach
         </div>
