@@ -90,14 +90,20 @@
                             </div>
                         </div>
 
-                        <div class="row section-title">
-                            <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
-                                <img src="https://picsum.photos/id/305/1000/500.jpg">
+                        @foreach($relatedPosts as $relatedPost)
+                            <div class="row section-title">
+                                <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
+                                    <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
+                                        <img src="https://picsum.photos/id/305/1000/500.jpg">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7 col-md-8 col-lg-9 article-title">
+                                    <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
+                                        <h4>{{ $relatedPost->title }}</h4>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-sm-7 col-md-8 col-lg-9 article-title">
-                                <h4>JUDUL LAIN</h4>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>

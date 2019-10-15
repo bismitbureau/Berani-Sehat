@@ -36,6 +36,18 @@ class PageController extends Controller
         $comments = Comment::where('post_id', $post_id)
                     ->orderBy('created_at', 'desc')
                     ->get();
+        $tag_ids = $post->tags;
+        $relatedPosts = Post::whereHas('tags', function($q) use ($tag_ids) {
+                            $q->whereIn('tags.id', $tag_ids);
+                        })
+                        ->orWhere('category_id', $post->category->id)
+                        ->orderBy('created_at', 'desc')
+                        ->take(3)
+                        ->get();
+        if ($relatedPosts == null) {
+            $relatedPosts = Post::all()->orderBy('created_at', 'desc')->take(3)->get();
+        }
+
         return view('pages.article', get_defined_vars());
     }
 

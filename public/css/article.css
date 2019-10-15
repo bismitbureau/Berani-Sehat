@@ -157,7 +157,17 @@
     color: #2C3137;
  }
 
- .comment-object .muted {
+.comment-object .muted {
     color: #C2C3C4;
     font-weight: 100;
+}
+
+.section-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.section-title a:hover {
+    color: white;
+    text-decoration: none;
 }
