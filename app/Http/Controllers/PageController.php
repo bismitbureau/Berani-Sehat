@@ -22,6 +22,7 @@ class PageController extends Controller
                     })->with('tags', 'category', 'user')
                     ->withCount('comments')
                     ->published()
+                    ->orderBy('created_at', 'desc')
                     ->simplePaginate(3);
 
         $categories = Category::all();
@@ -38,8 +39,14 @@ class PageController extends Controller
 
     public function category($category_id)
     {
-        $category = Category::get('id', $category_id);
-        $posts = Post::where('category_id', $category_id)->get();
+        $category = Category::find($category_id);
+        $posts = Post::where('category_id', $category_id)
+                    ->with('tags', 'category', 'user')
+                    ->withCount('comments')
+                    ->published()
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+
         return view('pages.categories', get_defined_vars());
     }
 
