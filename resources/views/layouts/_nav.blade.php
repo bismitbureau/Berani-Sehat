@@ -6,6 +6,8 @@
         </div>
     </div>
     <span class="navbar-brand mb-0 h1">
-        <img class="bs-logo" src="{{ asset('img/Berani_sehat_logo_transparent.png') }}">
+        <a href="/">
+            <img class="bs-logo" src="{{ asset('img/Berani_sehat_logo_transparent.png') }}">
+        </a>
     </span>
 </nav>

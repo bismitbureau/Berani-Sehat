@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', $post->title)
+
 @section('extra-fonts')
 
 @endsection
@@ -44,7 +46,7 @@
                         <br>
                         <div class="row">
                         <div class="col-md-12">
-                            {{ $post->body }}
+                            {!! $post->body !!}
                         </div>
                         </div>
 

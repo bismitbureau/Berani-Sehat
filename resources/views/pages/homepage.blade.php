@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', 'Welcome')
+
 @section('extra-fonts')
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 @endsection

@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', $category->name)
+
 @section('extra-fonts')
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 @endsection
@@ -31,7 +33,7 @@
                         </div>
                         <div class="hidden">
                             <div class="article-txt">
-                                <p>{{ str_limit($post->body, 50) }}</p>
+                                <p>{{ str_limit(strip_tags($post->body), 60) }}</p>
                             </div>
                         </div>
                     </a>
