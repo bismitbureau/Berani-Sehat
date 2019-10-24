@@ -25,7 +25,7 @@
             @foreach ($posts as $post)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }} head-article">
                     <a href="{{ route('post', ['id' => $post->id]) }}">
-                        <img src="https://picsum.photos/id/210/1000/500.jpg" class="d-block h-100 w-100" alt="...">
+                        <img src="{{ asset($post->pict) }}" class="d-block h-100 w-100" alt="...">
                         <div class="row unhidden title-head">
                             <div class="article-title">
                                 <h1>{{ $post->title }}</h1>

@@ -19,7 +19,7 @@
 @section('content')
     <div class="outer">
 
-        <div class="container-fluid headerkategori" style="background-image: url('https://picsum.photos/id/302/1000/500.jpg')">
+        <div class="container-fluid headerkategori" style="background-image: url({{ asset($post->category->pict) }})">
             <div class="container">
                 {{ $post->category->name }}
             </div>
@@ -104,7 +104,7 @@
                             <div class="row section-title">
                                 <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
                                     <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
-                                        <img src="https://picsum.photos/id/305/1000/500.jpg">
+                                        <img src="{{ asset($relatedPost->pict) }}">
                                     </a>
                                 </div>
                                 <div class="col-sm-7 col-md-8 col-lg-9 article-title">

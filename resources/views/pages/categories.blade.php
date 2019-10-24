@@ -25,7 +25,7 @@
             @foreach($posts as $post)
                 <div class="col-sm-12 col-md-4 container-fluid articles">
                     <a href="{{ route('post', ['post_id' => $post->id]) }}">
-                        <img src="https://picsum.photos/id/204/1000/500.jpg" alt="jar" class="articles-img">
+                        <img src="{{ asset($post->pict) }}" alt="jar" class="articles-img">
                         <div class="unhidden">
                             <div class="article-txt">
                                 <h1>{{ $post->title }}</h1>
