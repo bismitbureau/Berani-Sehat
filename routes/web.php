@@ -28,6 +28,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
 });
 
+Route::get('redirect/{driver}', 'Auth\LoginController@redirectToProvider')
+    ->name('login.provider')
+    ->where('driver', implode('|', config('auth.socialite.drivers')));
+
+Route::get('{driver}/callback', 'Auth\LoginController@handleProviderCallback')
+    ->name('login.callback')
+    ->where('driver', implode('|', config('auth.socialite.drivers')));
+
 Route::get('/', 'PageController@homepage')->name('homepage');
 Route::get('/postingan/{post_id}', 'PageController@post')->name('post');
 Route::get('/kategori/{kategori_id}', 'PageController@category')->name('category');

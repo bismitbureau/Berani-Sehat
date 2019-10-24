@@ -62,7 +62,11 @@
                                 <div class="col-9 form-group mb-2">
                                     <input name="body" ype="text" class="container-fluid form-control" id="commentarticle" placeholder="type your comment here">
                                 </div>
-                                <button type="submit" class="col-3 btn btn-danger mb-2">POST!</button>
+                                @if(Auth::user() == null)
+                                    <a href="{{ route('login.provider', 'google') }}" class="col-3 btn btn-danger mb-2">{{ __('Google Sign in') }}</a>
+                                @else
+                                    <button type="submit" class="col-3 btn btn-danger mb-2">POST!</button>
+                                @endif
                             </form>
                         </div>
 
@@ -76,7 +80,11 @@
                             <div class="comments-inner-container">
                                 @foreach ($post->comments as $comment)
                                     <div class="media mb-4">
-                                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                                        @if($comment->user->avatar)
+                                            <img class="d-flex mr-3 rounded-circle" height="40" weight="40" src="{{ $comment->user->avatar }}" alt="avatar">
+                                        @else
+                                            <img class="d-flex mr-3 rounded-circle" height="40" weight="40" src="{{ asset('img/Berani_sehat_icon.png') }}" alt="avatar">
+                                        @endif
                                         <div class="media-body">
                                             <h6 class="mt-0">{{ $comment->user->name }} <span class="muted">&#183; {{ $comment->created_at->diffForHumans() }}</span></h6>
                                             {{ $comment->body }}
@@ -93,7 +101,7 @@
                         </div>
 
                         @foreach($relatedPosts as $relatedPost)
-                            <div class="row section-title">
+                        <div class="row section-title">
                                 <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
                                     <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
                                         <img src="https://picsum.photos/id/305/1000/500.jpg">
