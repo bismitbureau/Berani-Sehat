@@ -227,6 +227,10 @@ th {
   padding: 0;
 }
 
+.cke_dialog_tabs a {
+    display: inline-block !important;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 
 @media print {
@@ -5174,6 +5178,10 @@ tbody.collapse.in {
 .nav-justified > .dropdown .dropdown-menu {
   top: auto;
   left: auto;
+}
+
+#cke_Upload_132 {
+    display: inline-block !important;
 }
 
 @media (min-width: 768px) {

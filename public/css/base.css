@@ -1,0 +1,186 @@
+/* Navbar */
+
+nav {
+    background-color: #EF4640;
+    color: white;
+
+    font-weight: bold;
+    height: 30vh;
+}
+
+nav button{
+    position: relative;
+    float: left;
+}
+
+.bs-logo {
+    width: 25vw;
+}
+
+.search-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.search-btn {
+    flex: 0;
+    color: #e84118;
+    float: right;
+    border-radius: 50%;
+    display: flex;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover + .search-txt {
+    display: block;
+}
+
+.search-txt:hover {
+    display: block;
+}
+
+.search-btn > i {
+    font-size: 5vh;
+}
+
+.search-txt {
+    display: none;
+    transition: 0.4s;
+}
+
+.sub-search-txt {
+    color: white;
+    border: 1px white;
+    background: none;
+    padding: 0 7.5px;
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.sub-search-txt::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.sub-search-txt:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.sub-search-txt::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+nav span h1 {
+    font-size: 7vh;
+}
+
+nav button {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar */
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: rgb(235, 228, 228);
+    background-color: rgb(31, 29, 29);
+}
+
+footer .row{
+    width:90vw;
+}
+
+.futer {
+    display: flex;
+}
+
+.futer p{
+    margin-bottom: 1%;
+}
+
+.futer i{
+    margin: 0 1%;
+}
+
+footer h2{
+    margin: 1rem;;
+}
+
+hr {
+    color: white;
+}
+
+.icons{
+    display: flex;
+}
+
+.icon-mom h2 {
+    float: right;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icons i{
+    font-size: 30px;
+}
+
+.footer-text {
+    font-size: 15px;
+}
+
+.footer-title {
+    font-size: 17px;
+}
+
+.fas {
+    line-height: inherit !important;
+}
+
+footer a {
+    margin: 2%;
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: none;
+}

@@ -31,7 +31,7 @@
                                 @forelse ($posts as $post)
                                     <tr>
                                         <td>{{ $post->title }}</td>
-                                        <td>{{ str_limit($post->body, 60) }}</td>
+                                        <td>{{ str_limit(strip_tags($post->body), 60) }}</td>
                                         <td>{{ $post->user->name }}</td>
                                         <td>{{ $post->category->name }}</td>
                                         <td>{{ $post->tags->implode('name', ', ') }}</td>

@@ -11,7 +11,7 @@ class BlogController extends Controller
     {
         $posts = Post::when($request->search, function($query) use($request) {
                         $search = $request->search;
-                        
+
                         return $query->where('title', 'like', "%$search%")
                             ->orWhere('body', 'like', "%$search%");
                     })->with('tags', 'category', 'user')
@@ -38,6 +38,6 @@ class BlogController extends Controller
         ]);
         flash()->overlay('Comment successfully created');
 
-        return redirect("/posts/{$post->id}");
+        return redirect()->route('post', ['post_id' => $post->id]);
     }
 }

@@ -1,0 +1,173 @@
+.headerkategori {
+    padding-top: 50px;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    color: #EF4640;
+    font-size: 5vh;
+    text-transform: uppercase;
+    padding-top: 25vh;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 5vh;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.imgarticle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.sosmed-artikel {
+    font-size: 20px;
+}
+
+.sosmed-artikel a {
+    text-decoration: none;
+    color: black;
+}
+
+.marginbottom {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.marginbottom .form-group {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-inline {
+    width: 100%;
+}
+
+#commentarticle {
+    width: 100% !important;
+    border-radius: 0;
+    border-color: red;
+    border-width: 1px;
+}
+
+.marginbottom .btn {
+    border-radius: 0;
+}
+
+.boxshadow {
+    box-shadow: 10px 10px 5px grey;
+    top: 35vh;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 35vh;
+}
+
+.outer {
+    z-index: -1;
+    overflow: hidden;
+}
+
+.section-title {
+    margin-top: 40px;
+}
+
+.section-title h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.article-picture img {
+    width: 180px;
+}
+
+.article-picture {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.section-title h4 {
+    margin-bottom: 0;
+}
+
+.article-title {
+    margin: auto;
+    background-color: #EF4640;
+    color: white;
+    padding: 15px;
+}
+
+.comments-header {
+    text-align: center;
+}
+
+.comments-header h1 {
+    display: inline-block;
+}
+
+.comments-header .fa-close {
+    float: right;
+    font-size: 1.4em;
+}
+
+.comments-header:hover {
+    cursor: pointer;
+    color: lighten(#000, 50%);
+}
+
+.comments-inner-container {
+    margin-top: 2.5em;
+}
+
+.comment-object {
+    display: flex;
+    justify-content: space-around;
+    font-size: 90%;
+    line-height: 1.7em;
+    margin-bottom: 2em;
+    padding: 0 2em 0 .5em;
+    box-sizing: border-box;
+}
+
+.comment-object:last-of-type {
+    margin-bottom: 0;
+}
+
+.comment-object .image-container img {
+    border-radius: 50%;
+    width: 50px;
+ }
+
+ .comment-object .comment-text {
+    width: 250px;
+    color: #626A73;
+    padding-left: 1em;
+}
+
+.comment-object h2 {
+    margin-bottom: .2em;
+    color: #2C3137;
+ }
+
+.comment-object .muted {
+    color: #C2C3C4;
+    font-weight: 100;
+}
+
+.section-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.section-title a:hover {
+    color: white;
+    text-decoration: none;
+}

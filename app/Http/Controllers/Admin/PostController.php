@@ -8,6 +8,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\WebHelper;
 
 class PostController extends Controller
 {
@@ -44,10 +45,13 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
+        $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/post');
+
         $post = Post::create([
             'title'       => $request->title,
             'body'        => $request->body,
-            'category_id' => $request->category_id
+            'category_id' => $request->category_id,
+            'pict'        => $image
         ]);
 
         $tagsId = collect($request->tags)->map(function($tag) {
@@ -101,11 +105,21 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
-        $post->update([
-            'title'       => $request->title,
-            'body'        => $request->body,
-            'category_id' => $request->category_id
-        ]);
+        if ($request->has('pict')) {
+            $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/post');
+            $post->update([
+                'title'       => $request->title,
+                'body'        => $request->body,
+                'category_id' => $request->category_id,
+                'pict'        => $image
+            ]);
+        } else {
+            $post->update([
+                'title'       => $request->title,
+                'body'        => $request->body,
+                'category_id' => $request->category_id
+            ]);
+        }
 
         $tagsId = collect($request->tags)->map(function($tag) {
             return Tag::firstOrCreate(['name' => $tag])->id;
