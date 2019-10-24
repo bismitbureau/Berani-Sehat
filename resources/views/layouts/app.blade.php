@@ -15,10 +15,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="http://cdn.ckeditor.com/4.4.5.1/standard/ckeditor.js"></script>
-
-
-
+    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 
     <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
     <script>
@@ -27,11 +24,9 @@
         });
     </script>
     <script>
-            window.Laravel = {!! json_encode([
-                'csrfToken' => csrf_token(),
-            ]) !!};
-
-
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
     </script>
 </head>
 <body>
@@ -103,8 +98,10 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
-        CKEDITOR.replace( 'editor1');
-
+        CKEDITOR.replace( 'editor1', {
+            filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token() ]) }}",
+            filebrowserUploadMethod: 'form'
+        });
     </script>
 
 </body>

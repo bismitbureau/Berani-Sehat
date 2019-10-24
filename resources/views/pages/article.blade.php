@@ -101,7 +101,7 @@
                         </div>
 
                         @foreach($relatedPosts as $relatedPost)
-                        <div class="row section-title">
+                            <div class="row section-title">
                                 <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
                                     <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
                                         <img src="https://picsum.photos/id/305/1000/500.jpg">
