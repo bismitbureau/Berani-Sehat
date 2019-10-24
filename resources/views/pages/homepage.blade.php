@@ -46,7 +46,7 @@
     </div>
     @foreach ($categories as $category)
         <div class="container-fluid categories">
-            <img src="https://picsum.photos/id/203/1000/500.jpg" alt="jar" class="categories-img">
+            <img src="{{ asset($category->pict) }}" alt="jar" class="categories-img">
             <div class="row unhidden">
                 <div class="col-sm-4 col-10 category-txt">
                     <h1>{{ $category->name }}</h1>
@@ -54,9 +54,7 @@
             </div>
             <div class="row hidden">
                 <div class="col-sm-4 col-10 category-txt">
-                    <p>uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
-                            uf hewuewh ehufihwehuefewfb uiebuiwe ibef bewfb webfiweuif bweifbwei fiwe febfuie ifbeuif be
-                    </p>
+                    <p>{{ $category->desc }}</p>
                     <a class="category-link" href="{{ route('category', ['category_id' => $category->id]) }}">Yuk cek selengkapnya di sini!</a>
                 </div>
             </div>

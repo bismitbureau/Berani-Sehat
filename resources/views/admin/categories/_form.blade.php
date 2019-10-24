@@ -9,3 +9,27 @@
         </span>
     </div>
 </div>
+
+<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+    {!! Form::label('desc', 'Description', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::text('desc', null, ['class' => 'form-control', 'required', 'autofocus']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('name') }}</strong>
+        </span>
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+    {!! Form::label('pict', 'Picture', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::file('pict', null, ['class' => 'form-control', 'required', 'autofocus']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('name') }}</strong>
+        </span>
+    </div>
+</div>

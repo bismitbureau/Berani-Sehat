@@ -15,7 +15,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid headerkategori" style="background-image: url('https://picsum.photos/id/302/1000/500.jpg')">
+    <div class="container-fluid headerkategori" style="background-image: url({{ asset($category->pict) }}); background-position: center;">
         <div class="container">
             {{ $category->name }}
         </div>

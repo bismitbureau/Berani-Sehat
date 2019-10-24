@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\WebHelper;
 use App\Models\Category;
 
 class CategoryController extends Controller
@@ -40,7 +41,14 @@ class CategoryController extends Controller
     {
         $this->validate($request, ['name' => 'required']);
 
-        Category::create(['name' => $request->name]);
+        $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/category');
+
+        Category::create([
+            'name' => $request->name,
+            'desc' => $request->desc,
+            'pict' => $image
+        ]);
+
         flash()->overlay('Category created successfully');
 
         return redirect('/admin/categories');
@@ -68,7 +76,19 @@ class CategoryController extends Controller
     {
         $this->validate($request, ['name' => 'required']);
 
-        $category->update($request->all());
+        if ($request->has('pict')) {
+            $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/category');
+            $category->update([
+                'name' => $request->name,
+                'desc' => $request->desc,
+                'pict' => $image
+            ]);
+        } else {
+            $category->update([
+                'name' => $request->name,
+                'desc' => $request->desc
+            ]);
+        }
         flash()->overlay('Category updated successfully');
 
         return redirect('/admin/categories');
