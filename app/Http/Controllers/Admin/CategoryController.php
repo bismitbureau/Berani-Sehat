@@ -39,7 +39,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required']);
+        $this->validate($request, [
+            'name' => 'required',
+            'desc' => 'required',
+            'pict' => 'required'
+        ]);
 
         $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/category');
 
@@ -74,7 +78,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        $this->validate($request, ['name' => 'required']);
+        $this->validate($request, [
+            'name' => 'required',
+            'desc' => 'required'
+            'pict' => 'required'
+        ]);
 
         if ($request->has('pict')) {
             $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/category');
