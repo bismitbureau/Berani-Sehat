@@ -36,7 +36,7 @@
                             <a href="https://www.facebook.com/media.aesculapius">
                                 <i class="fab fa-facebook-square"></i>
                             </a>
-                            <a href="">
+                            <a href="http://line.me/ti/p/~@wxx0340z">
                                 <i class="fab fa-line"></i>
                             </a>
                             <a href="https://www.instagram.com/mediaaesculapius">
