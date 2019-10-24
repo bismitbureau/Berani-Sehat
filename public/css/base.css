@@ -92,6 +92,13 @@ nav button {
     justify-self: flex-start;
 }
 
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
 /* Navbar */
 
 /* Footer */
@@ -168,3 +175,12 @@ footer a:hover {
 }
 
 /* Footer */
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: none;
+}

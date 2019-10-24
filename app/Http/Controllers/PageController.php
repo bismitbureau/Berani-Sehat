@@ -48,6 +48,8 @@ class PageController extends Controller
             $relatedPosts = Post::all()->orderBy('created_at', 'desc')->take(3)->get();
         }
 
+        $categories = Category::all();
+
         return view('pages.article', get_defined_vars());
     }
 
@@ -61,6 +63,8 @@ class PageController extends Controller
                     ->published()
                     ->get();
 
+        $categories = Category::all();
+
         return view('pages.categories', get_defined_vars());
     }
 
@@ -73,7 +77,9 @@ class PageController extends Controller
                             ->orWhere('body', 'like', "%$search%");
                     })->with('tags', 'category', 'user')
                     ->published()
-                    ->simplePaginate(5);
+                    ->get();
+
+        $categories = Category::all();
 
         return view('pages.search', get_defined_vars());
     }
