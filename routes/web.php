@@ -28,14 +28,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
 });
 
-Route::get('test/article', function(){
-    return view('pages.article');
-});
-
-Route::get('test/category', function(){
-    return view('pages.categories');
-});
-
 Route::get('/', 'PageController@homepage')->name('homepage');
 Route::get('/postingan/{post_id}', 'PageController@post')->name('post');
 Route::get('/kategori/{kategori_id}', 'PageController@category')->name('category');
