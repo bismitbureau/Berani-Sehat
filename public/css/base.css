@@ -56,27 +56,30 @@ nav a:hover + .search-txt {
 }
 
 .search-txt {
+    display: none;
+    transition: 0.4s;
+}
+
+.sub-search-txt {
     color: white;
     border: 1px white;
     background: none;
     padding: 0 7.5px;
     color: white;
     font-size: 3vh;
-    transition: 0.4s;
     font-weight: bold;
-    display: none;
 }
 
-.search-txt::placeholder {
+.sub-search-txt::placeholder {
     color: white;
     opacity: 1; /* Firefox */
 }
 
-.search-txt:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.sub-search-txt:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
 }
 
-.search-txt::-ms-input-placeholder { /* Microsoft Edge */
+.sub-search-txt::-ms-input-placeholder { /* Microsoft Edge */
     color: white;
 }
 

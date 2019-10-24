@@ -64,4 +64,18 @@ class PageController extends Controller
         return view('pages.categories', get_defined_vars());
     }
 
+    public function search(Request $request)
+    {
+        $posts = Post::when($request->search, function($query) use($request) {
+                        $search = $request->search;
+
+                        return $query->where('title', 'like', "%$search%")
+                            ->orWhere('body', 'like', "%$search%");
+                    })->with('tags', 'category', 'user')
+                    ->published()
+                    ->simplePaginate(5);
+
+        return view('pages.search', get_defined_vars());
+    }
+
 }

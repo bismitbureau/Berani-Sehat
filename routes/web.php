@@ -39,3 +39,4 @@ Route::get('{driver}/callback', 'Auth\LoginController@handleProviderCallback')
 Route::get('/', 'PageController@homepage')->name('homepage');
 Route::get('/postingan/{post_id}', 'PageController@post')->name('post');
 Route::get('/kategori/{kategori_id}', 'PageController@category')->name('category');
+Route::get('/cari', 'PageController@search')->name('search');
