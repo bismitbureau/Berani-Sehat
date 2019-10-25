@@ -1,28 +1,4 @@
-# Laravel Blog
-
-A simple blog for demonstration purpose. Based on Laravel 5.8
-
-## Requirements
-
-- Laravel 5.8
-- PHP >= 7.1.3
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Mbstring PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
-- Ctype PHP Extension
-- JSON PHP Extension
-- BCMath PHP Extension
-
-## Demo
-
-You can try the live demo : [http://gentle-everglades-40337.herokuapp.com/](http://gentle-everglades-40337.herokuapp.com/)
-
-## Demo login info
-
-user: contact@milon.im | password: password
-
+# Berani Sehat
 
 ## Installation
 
@@ -56,9 +32,3 @@ This projects exposes some API endpoints. You could request those endpoints with
 /api/users     // only accessible by admin
 /api/posts
 ```
-
-## Author
-
-- [Nuruzzaman Milon](https://milon.im)
-
-Feel free to email me, if you have any question.
