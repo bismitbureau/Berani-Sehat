@@ -37,8 +37,8 @@ class AuthController extends Controller
         $user->reset_key = rand(10000, 99999);
         $user->save();
 
-        Mail::raw("Your Password Reset Key is: {$user->reset_key} \n\n--\nLaravel Blog Team", function ($message) use ($user) {
-            $message->from('no-reply@laravel-blog.com', 'Castro Team');
+        Mail::raw("Your Password Reset Key is: {$user->reset_key} \n\n--\nBerani Sehat Team", function ($message) use ($user) {
+            $message->from('no-reply@beranisehat.com', 'Berani Sehat Team');
             $message->subject('Password Reset Key of Castro');
             $message->to($user->email);
         });
