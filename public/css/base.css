@@ -40,14 +40,17 @@ nav button{
 
 nav a:hover {
     color: white;
+    transition: 1s;
     text-decoration: none;
 }
 
 nav a:hover + .search-txt {
+    transition: 1s;
     display: block;
 }
 
 .search-txt:hover {
+    transition: 1s;
     display: block;
 }
 

@@ -19,6 +19,7 @@
 
                         <p><strong>Category: </strong>{{ $post->category->name }}</p>
                         <p><strong>Tags: </strong>{{ $post->tags->implode('name', ', ') }}</p>
+                        <p><strong>Picture: </strong><img id="img-preview" src="{{ asset( $post->pict ) }}" alt="your image" style="width:100%;"></p>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $posts      = Post::count();
         $comments   = Comment::count();
         $tags       = Tag::count();
