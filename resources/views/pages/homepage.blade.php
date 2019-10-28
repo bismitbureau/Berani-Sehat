@@ -65,7 +65,7 @@
             <div class="col">
                 <h3>ABOUT US</h3>
                 <hr>
-                <h3>BERANISEHAT!</h3>
+                <h5>BERANISEHAT!</h5>
                 <p>Sehat, elemen kehidupan yang diinginkan oleh setiap manusia. Tidak bisa didapat begitu
                     saja, perlu upaya yang sering kali tidak mudah untuk meraihnya. Informasi yang tepat dan
                     benar adalah kunci utamanya. Disinilah peranan Beranisehat.com, portal berita kesehatan
@@ -75,7 +75,7 @@
                 </p>
             </div>
             <div class="col">
-                <h3>MEDIA AESCULAPIUS</h3>
+                <h5>MEDIA AESCULAPIUS</h5>
                 <hr>
                 <p>
                     Beranisehat.com diluncurkan pada tahun 2014 oleh Media Aesculapius, sebuah

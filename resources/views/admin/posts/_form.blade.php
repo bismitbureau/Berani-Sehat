@@ -58,7 +58,13 @@
     {!! Form::label('pict', 'Picture', ['class' => 'col-md-2 control-label']) !!}
 
     <div class="col-md-8">
-        {!! Form::file('pict', null, ['class' => 'form-control', 'required', 'autofocus']) !!}
+        @if( isset($post) )
+            <img id="img-preview" src="{{ asset( $post->pict ) }}" alt="your image" style="width:100%;">
+            {!! Form::file('pict', null, ['class' => 'form-control', 'autofocus']) !!}
+        @else
+            <img id="img-preview" src="#" alt="your image" style="width:100%;">
+            {!! Form::file('pict', null, ['class' => 'form-control', 'required', 'autofocus']) !!}
+        @endif
 
         <span class="help-block">
             <strong>{{ $errors->first('pict') }}</strong>

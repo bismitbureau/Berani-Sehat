@@ -80,7 +80,7 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'desc' => 'required'
+            'desc' => 'required',
             'pict' => 'required'
         ]);
 

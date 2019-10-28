@@ -7,7 +7,7 @@
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
     <link rel="shortcut icon" href="{{ asset('img/Berani_sehat_icon.png') }}">
-    
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -102,6 +102,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
         CKEDITOR.replace( 'editor1', {
