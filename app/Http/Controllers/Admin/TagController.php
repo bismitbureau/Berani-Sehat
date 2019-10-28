@@ -9,12 +9,25 @@ use App\Http\Controllers\Controller;
 class TagController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $tags = Tag::paginate(10);
 
         return view('admin.tags.index', compact('tags'));
@@ -27,6 +40,9 @@ class TagController extends Controller
      */
     public function create()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         return view('admin.tags.create');
     }
 
@@ -38,6 +54,9 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $this->validate($request, ['name' => 'required']);
 
         Tag::create(['name' => $request->name]);
@@ -54,6 +73,9 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         return view('admin.tags.edit', compact('tag'));
     }
 
@@ -66,6 +88,9 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $this->validate($request, ['name' => 'required']);
 
         $tag->update($request->all());
@@ -82,6 +107,9 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $tag->delete();
         flash()->overlay('Tag deleted successfully.');
 

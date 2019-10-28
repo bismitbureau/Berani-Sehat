@@ -13,12 +13,25 @@ use App\Http\Controllers\WebHelper;
 class PostController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $posts = Post::with(['user', 'category', 'tags', 'comments'])->paginate(10);
 
         return view('admin.posts.index', compact('posts'));
@@ -31,6 +44,9 @@ class PostController extends Controller
      */
     public function create()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $categories = Category::pluck('name', 'id')->all();
         $tags = Tag::pluck('name', 'name')->all();
 
@@ -45,6 +61,9 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/post');
 
         $post = Post::create([
@@ -72,6 +91,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $post = $post->load(['user', 'category', 'tags', 'comments']);
 
         return view('admin.posts.show', compact('post'));
@@ -85,6 +107,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         if($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
             flash()->overlay("You can't edit other peoples post.");
             return redirect('/admin/posts');
@@ -105,6 +130,9 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         if ($request->has('pict')) {
             $image = WebHelper::saveImageToPublic($request->file('pict'), '/img/post');
             $post->update([
@@ -139,6 +167,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         if($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
             flash()->overlay("You can't delete other peoples post.");
             return redirect('/admin/posts');
@@ -152,6 +183,9 @@ class PostController extends Controller
 
     public function publish(Post $post)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $post->is_published = !$post->is_published;
         $post->save();
         flash()->overlay('Post changed successfully.');

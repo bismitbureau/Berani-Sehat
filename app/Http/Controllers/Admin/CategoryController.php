@@ -10,12 +10,25 @@ use App\Models\Category;
 class CategoryController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $categories = Category::withCount('posts')->paginate(10);
 
         return view('admin.categories.index', compact('categories'));
@@ -28,6 +41,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         return view('admin.categories.create');
     }
 
@@ -39,6 +55,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $this->validate($request, [
             'name' => 'required',
             'desc' => 'required',
@@ -66,6 +85,9 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         return view('admin.categories.edit', compact('category'));
     }
 
@@ -78,6 +100,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $this->validate($request, [
             'name' => 'required',
             'desc' => 'required',
@@ -110,6 +135,9 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $category->delete();
         flash()->overlay('Category deleted successfully');
 

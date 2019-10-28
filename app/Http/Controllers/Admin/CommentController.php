@@ -9,12 +9,25 @@ use App\Models\Comment;
 class CommentController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         $comments = Comment::with('post')->paginate(10);
 
         return view('admin.comments.index', compact('comments'));
@@ -28,6 +41,9 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
+        if (auth()->user()->is_admin == false) {
+            return redirect('/');
+        }
         if($comment->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
             flash()->overlay("You can't delete other peoples comment.");
             return redirect('/admin/posts');
