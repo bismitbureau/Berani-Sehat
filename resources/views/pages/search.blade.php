@@ -23,7 +23,7 @@
                         <img src="https://picsum.photos/id/204/1000/500.jpg" alt="jar" class="articles-img">
                         <div class="unhidden">
                             <div class="article-txt">
-                                <h1>{{ $post->title }}</h1>
+                                <h5>{{ $post->title }}</h5>
                             </div>
                         </div>
                         <div class="hidden">
