@@ -20,7 +20,7 @@
     <div class="outer">
 
         <div class="container-fluid headerkategori" style="background-image: url({{ asset($post->category->pict) }})">
-            <div class="container">
+            <div class="container center-when-small">
                 {{ $post->category->name }}
             </div>
         </div>
@@ -29,10 +29,12 @@
             <div classs="row" onloadedmetadata="">
                 <div class="card col-md-12">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $post->title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ $post->created_at->toDayDateTimeString() }}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">OLEH: {{ $post->user->name }}</h6>
-                        <div class="sosmed-artikel">
+                        <h5 class="card-title center-when-small">
+                            {{ $post->title }}
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted center-when-small">{{ $post->created_at->toDayDateTimeString() }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted center-when-small">OLEH: {{ $post->user->name }}</h6>
+                        <div class="sosmed-artikel center-when-small">
                             <a href="https://www.facebook.com/media.aesculapius">
                                 <i class="fab fa-facebook-square"></i>
                             </a>
@@ -102,12 +104,12 @@
 
                         @foreach($relatedPosts as $relatedPost)
                             <div class="row section-title">
-                                <div class="col-sm-5 col-md-4 col-lg-3 article-picture">
+                                <div class="col-3 col-lg-3 article-picture">
                                     <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
                                         <img src="{{ asset($relatedPost->pict) }}">
                                     </a>
                                 </div>
-                                <div class="col-sm-7 col-md-8 col-lg-9 article-title">
+                                <div class="col-9 col-lg-9 article-title">
                                     <a href="{{ route('post', ['post_id' => $relatedPost->id]) }}">
                                         <h4>{{ $relatedPost->title }}</h4>
                                     </a>
@@ -119,6 +121,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="black-bottom">
     </div>
 @endsection
 

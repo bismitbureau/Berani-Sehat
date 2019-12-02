@@ -26,9 +26,11 @@
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }} head-article">
                     <a href="{{ route('post', ['id' => $post->id]) }}">
                         <img src="{{ asset($post->pict) }}" class="d-block h-100 w-100" alt="...">
-                        <div class="row unhidden title-head">
-                            <div class="article-title">
-                                <h1>{{ $post->title }}</h1>
+                        <div class="row unhidden title-head outer">
+                            <div class="article-title middle">
+                                <div class="inner">
+                                    <h1>{{ $post->title }}</h1>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -60,7 +62,7 @@
             </div>
         </div>
     @endforeach
-    <div class="container-fluid my-5" id="about">
+    <div class="container-fluid py-5" id="about">
         <div class="row">
             <div class="col">
                 <h3>ABOUT US</h3>

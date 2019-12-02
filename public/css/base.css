@@ -8,6 +8,10 @@ nav {
     height: 30vh;
 }
 
+.nav1 {
+    height: 20vh !important;
+}
+
 nav button{
     position: relative;
     float: left;
@@ -98,7 +102,7 @@ nav button {
 .center {
     margin: auto;
     width: 100%;
-    padding: 10px;
+    padding: 0;
     text-align: center;
 }
 
@@ -111,6 +115,8 @@ footer {
     justify-content: center;
     color: rgb(235, 228, 228);
     background-color: rgb(31, 29, 29);
+    padding: 20px;
+    height: 30vh;
 }
 
 footer .row{
@@ -151,19 +157,22 @@ hr {
 }
 
 .icons i{
-    font-size: 30px;
+    font-size: 50px;
 }
 
 .footer-text {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .footer-title {
-    font-size: 17px;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.fas {
+nav .fas {
     line-height: inherit !important;
+    padding: 5px 3px 0 3px;
 }
 
 footer a {
@@ -177,6 +186,16 @@ footer a:hover {
     color: white;
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-size: 20px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg") !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #EF4640 !important;
+    padding: 0 !important;
+}
+
 /* Footer */
 
 nav a {
@@ -186,4 +205,90 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
+}
+
+#categories {
+    display: none;
+    /* padding: 5px; */
+}
+
+.right-pos {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* .form-group {
+    width: 100%;
+} */
+
+.search-inp {
+    font-size: 14px;
+    padding: 2px !important;
+    width: 100px !important;
+    color: white !important;
+    border: 1px solid white;
+    background: none;
+    font-weight: bold;
+}
+
+.search-inp::placeholder {
+    color: white !important;
+    opacity: 1; /* Firefox */
+}
+
+.search-bar {
+    width: 120px !important;
+}
+
+.nav1 .menu-bar {
+    display: none;
+}
+
+.nav2 h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.nav2 {
+    height: 10vh;
+    padding: 0 !important;
+}
+
+.nav2 .container {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav1 .menu-bar {
+        display: block;
+    }
+
+    .nav2 .container {
+        display: none;
+    }
+
+    .nav2 {
+        height: 0;
+    }
+
+    .nav1 {
+        height: 30vh;
+    }
+
+    .nav1 .menu-bar h5 {
+        font-size: 10px;
+        padding: 5px;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+
+    .icons i{
+        padding: 3px;
+        font-size: 25px;
+    }
+
 }

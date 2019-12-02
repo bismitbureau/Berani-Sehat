@@ -17,7 +17,7 @@
         @yield('extra-css')
     </head>
     <body>
-        @include('layouts/_nav2')
+        @include('layouts/_nav3')
         @yield('content')
         @include('layouts/_footer')
         <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>

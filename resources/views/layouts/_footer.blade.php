@@ -1,10 +1,10 @@
 <footer class="container-fluid">
-    <div class="row">
+    <div class="row" style="padding: 0 !important; margin: 0 !important;">
         <div class="col-8">
-            <h2 class="footer-title">Contact Us</h2>
+            <h2 class="footer-title">CONTACT US</h2>
             <div class="container futer">
                 <i class="fas fa-home"></i>
-                <p class="footer-text">MEDIA AESCULAPIUS, BEM IKM FKUI, GEDUNG C LANTAI 4, RUMPUN ILMU KESEHATAN, UI DEPOK.</p>
+                <p class="footer-text">MEDIA AESCULAPIUS, BEM IKM FKUI, GEDUNG C LANTAI 4, RUMPUN ILMU KESEHATAN, UI DEPOK</p>
             </div>
             <div class="container futer">
                 <i class="fas fa-envelope"></i>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-4 icon-mom">
-            <h2  class="footer-title"style="margin-bottom: 0;">Stay Connected</h2>
+            <h2  class="footer-title"style="margin-bottom: 0;">STAY CONNECTED</h2>
             <div class="container icons">
                 <a href="https://www.facebook.com/media.aesculapius">
                     <i class="fab fa-facebook-square"></i>

@@ -27,7 +27,7 @@
             @endforeach
 
             <div class="col center">
-                <a href="https://issuu.com/beranisehatcom/docs/402937_septok">
+            <a href="https://issuu.com/beranisehatcom/docs/402937_septok">
                     <h5 class="center">
                         SKMA
                     </h5>
