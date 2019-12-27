@@ -1,6 +1,6 @@
 .headerkategori {
     padding-top: 50px;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -8,7 +8,7 @@
     color: #EF4640;
     font-size: 5vh;
     text-transform: uppercase;
-    padding-top: 25vh;
+    padding-top: 12vh;
     font-weight: bold;
     margin: auto;
     text-align: center;
@@ -50,8 +50,9 @@
 }
 
 .articles {
+    width: 30vw;
+    height: 30vw;
     padding:0;
-    height:50vh;
     display: inline-block;
     position: relative;
     border: 3px solid transparent;
@@ -120,14 +121,21 @@
 .article-txt {
     text-align: center;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
+    height: 50px;
+    position: relative;
 }
 
 .article-txt h5 {
     font-size: 1.7vh;
     text-transform: uppercase;
     text-align: center;
-    margin: auto;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .article-txt p {
@@ -136,9 +144,91 @@
 
 .unhidden .article-txt {
     background-color: #EF4640;
-    padding: 22px 0;
+    /* padding: 22px 0; */
 }
 
 .unhidden .article-txt h5 {
     color: white;
+}
+
+.fullscreen {
+    display: block;
+}
+
+.smallscreen {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.section-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.section-title a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.article-picture img {
+    width: 13vw;
+    height: 13vw;
+    object-fit: cover;
+}
+
+.article-picture {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.article-title {
+    margin: auto;
+    background-color: #EF4640;
+    color: white;
+    padding: 5px !important;
+}
+
+.section-title h4 {
+    font-size: 8px;
+    margin-bottom: 0;
+    padding: 7px !important;
+    text-transform: uppercase;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    .article-txt {
+        height: 75px;
+    }
+
+    .article-txt h5 {
+        font-size: 2.1vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .article-txt {
+        height: 100px;
+    }
+
+    .article-txt h5 {
+        font-size: 2.4vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .fullscreen {
+        display: none;
+    }
+
+    .smallscreen {
+        display: block;
+    }
 }
