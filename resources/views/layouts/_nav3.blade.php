@@ -51,6 +51,26 @@
                         </h5>
                     </a>
                 </li>
+                <li class="nav-item">
+                    @if(Auth::user() == null)
+                    <a href="{{ route('login.provider', 'google') }}">
+                        <h5 class="center">
+                            Login
+                        </h5>
+                    </a>
+                    @else
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        <h5 class="center">
+                            Logout
+                        </h5>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                    @endif
+                </li>
             </ul>
         </div>
     </div>
@@ -82,6 +102,26 @@
                         SKMA
                     </h5>
                 </a>
+            </div>
+            <div class="col center">
+                @if(Auth::user() == null)
+                <a href="{{ route('login.provider', 'google') }}">
+                    <h5 class="center">
+                        Login
+                    </h5>
+                </a>
+                @else
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    <h5 class="center">
+                        Logout
+                    </h5>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+                @endif
             </div>
             <div class="col center">
                 <div id="cat_icon"><i class="fas fa-search"></i></div>

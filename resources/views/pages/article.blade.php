@@ -65,7 +65,7 @@
                                     <input name="body" ype="text" class="container-fluid form-control" id="commentarticle" placeholder="type your comment here">
                                 </div>
                                 @if(Auth::user() == null)
-                                    <a href="{{ route('login.provider', 'google') }}" class="col-3 btn btn-danger mb-2">{{ __('Google Sign in') }}</a>
+                                    <a href="{{ route('login.provider', 'google') }}" class="col-3 btn btn-danger mb-2">{{ __('LOGIN') }}</a>
                                 @else
                                     <button type="submit" class="col-3 btn btn-danger mb-2">POST!</button>
                                 @endif

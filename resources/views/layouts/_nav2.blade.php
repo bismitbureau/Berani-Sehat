@@ -35,6 +35,27 @@
             </div>
 
             <div class="col center">
+                @if(Auth::user() == null)
+                <a href="{{ route('login.provider', 'google') }}">
+                    <h5 class="center">
+                        Login
+                    </h5>
+                </a>
+                @else
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    <h5 class="center">
+                        Logout
+                    </h5>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+                @endif
+            </div>
+
+            <div class="col center">
                 <div class="search-box" style="margin-top:-15px;">
                     <div class="row">
                         <a class="col-4 search-btn" href="#"><i class="fas fa-search"></i></a>

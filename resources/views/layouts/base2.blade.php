@@ -19,6 +19,7 @@
     <body>
         @include('layouts/_nav3')
         @yield('content')
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><b>↑</b></button>
         @include('layouts/_footer')
         <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('lib/popper.min.js') }}"></script>

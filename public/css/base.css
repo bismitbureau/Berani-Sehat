@@ -292,3 +292,23 @@ nav a:hover {
     }
 
 }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  background-color: #EF4640;
+  color: white;
+  cursor: pointer;
+  padding: 0 14px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
