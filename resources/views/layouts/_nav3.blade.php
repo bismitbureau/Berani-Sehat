@@ -26,8 +26,8 @@
     </div>
 
     <div class="menu-bar">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav w-100">
+        <div class="collapse navbar-collapse row" id="navbarNav">
+            <ul class="navbar-nav w-100 col">
                 <li class="nav-item">
                     <a href="/">
                         <h5 class="center">
@@ -35,15 +35,51 @@
                         </h5>
                     </a>
                 </li>
-                @foreach($categories as $category)
+                @for ($i = 0; $i < count($categories); $i++)
+                    @if ($category_no == 3 && $i == 2 )
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if ($category_no == 4 && $i == 3 )
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if ($category_no == 5 && $i == 3 )
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if ($category_no == 6 && $i == 4 )
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if ($category_no == 7 && $i == 4 )
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if (($category_no == 8 && $i == 3) || ($category_no == 8 && $i == 7))
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if (($category_no == 9 && $i == 3) || ($category_no == 9 && $i == 7))
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
+                    @if (($category_no >= 10 && $i == 4) || ($category_no >= 10 && $i == 8))
+                        </ul>
+                        <ul class="navbar-nav w-100 col">
+                    @endif
                     <li class="nav-item">
-                        <a href="{{ route('category', ['category_id' => $category->id]) }}">
+                        <a href="{{ route('category', ['category_id' => $categories[$i]->id]) }}">
                             <h5 class="center">
-                                {{ $category->name }}
+                                {{ $categories[$i]->name }}
                             </h5>
                         </a>
                     </li>
-                @endforeach
+                @endfor
+            @if ($category_no == 2 || $category_no == 7 )
+                </ul>
+                <ul class="navbar-nav w-100">
+            @endif
                 <li class="nav-item">
                     <a href="https://issuu.com/beranisehatcom/docs/402937_septok">
                         <h5 class="center">

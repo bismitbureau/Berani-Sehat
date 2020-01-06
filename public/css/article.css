@@ -10,7 +10,7 @@
     color: #EF4640;
     font-size: 5vh;
     text-transform: uppercase;
-    padding-top: 25vh;
+    padding-top: 20vh;
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
 
 .boxshadow {
     box-shadow: 10px 10px 5px rgb(31, 29, 29);
-    top: 35vh;
+    top: 30vh;
     height: auto;
     z-index: 1;
     position: relative;

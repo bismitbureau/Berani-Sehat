@@ -157,8 +157,8 @@
 
 .smallscreen {
     display: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -230,5 +230,9 @@
 
     .smallscreen {
         display: block;
+    }
+
+    .headerpencarian {
+        font-size: 15px;
     }
 }

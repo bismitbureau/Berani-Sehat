@@ -26,6 +26,7 @@ class PageController extends Controller
                     ->simplePaginate(3);
 
         $categories = Category::all();
+        $category_no = Category::count();
 
         return view('pages.homepage', get_defined_vars());
     }
@@ -49,6 +50,7 @@ class PageController extends Controller
         }
 
         $categories = Category::all();
+        $category_no = Category::count();
 
         return view('pages.article', get_defined_vars());
     }
@@ -64,6 +66,7 @@ class PageController extends Controller
                     ->get();
 
         $categories = Category::all();
+        $category_no = Category::count();
 
         return view('pages.categories', get_defined_vars());
     }
@@ -80,6 +83,9 @@ class PageController extends Controller
                     ->get();
 
         $categories = Category::all();
+        $category_no = Category::count();
+        $posts_no = $posts->count();
+        $keyword = $request->search;
 
         return view('pages.search', get_defined_vars());
     }
