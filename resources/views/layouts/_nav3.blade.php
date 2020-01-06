@@ -78,7 +78,7 @@
                 @endfor
             @if ($category_no == 2 || $category_no == 7 )
                 </ul>
-                <ul class="navbar-nav w-100">
+                <ul class="navbar-nav w-100 col">
             @endif
                 <li class="nav-item">
                     <a href="https://issuu.com/beranisehatcom/docs/402937_septok">
